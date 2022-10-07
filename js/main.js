@@ -34,7 +34,9 @@ document.getElementById('submitbtn').addEventListener("click", function() {
     } else {
         price = preDiscountPrice
     }
-
+    
+    price = price.toFixed(2)
+    
     console.log("a")
     console.log(age,fName,kilo,price)
 });
