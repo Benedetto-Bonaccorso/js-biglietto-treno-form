@@ -9,19 +9,43 @@
 </head>
 <body>
     
+    <h2>Welcome to the Palermo metro System, expect the train to be 15 to 40 minutes late</h2>
+
     <div class="container">
-        <form action="">
-            <label for="fname">Name and Surname</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Please insert your full name">
-                <br>
-            <label for="lname">Kilometers</label>
-            <input type="text" id="kilometers" name="kilometers" placeholder="please insert how many kilometers you would like to travel">
-                <br>
-            <label for="lname">Age</label>
-            <input type="text" id="age" name="age" placeholder="please insert your age for discounting purposes">
-                <br>
-            <input type="submit" value="Submit" id="submitbtn">
+        <form action="" class="form">
+            <div class="input">
+                <label for="fname">Name and Surname</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Please insert your full name">
+            </div>
+
+            <div class="input">
+                <label for="lname">Kilometers</label>
+                <input type="text" id="kilometers" name="kilometers" placeholder="please insert how many kilometers you would like to travel">
+            </div>
+
+            <div class="input">
+                <label for="lname">Age</label>
+                <input type="text" id="age" name="age" placeholder="please insert your age for discounting purposes">
+            </div>
+
+            <input type="button" value="Submit" id="submitbtn">
         </form>
+
+        <div class="ticket">
+            <h3>Full Name</h3>
+            <h1 id="ticketname">Full Name</h1>
+            <h3>Kilometers</h3>
+            <h1 id="ticketkilometers">Kilometers</h1>
+            <h3>Discount</h3>
+            <h1 id="ticketdiscount">Discount: </h1>
+            <h3>Wagon Number</h3>
+            <h1 id="ticketwagon">Wagon</h1>
+            <h3>Price</h3>
+            <h1 id="ticketprice">Ticket Price</h1>
+
+            <img src="./img/Totally_not_a_Rickroll_QR_code.png" alt="">
+
+        </div>
     </div>
 
 

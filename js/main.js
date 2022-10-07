@@ -13,6 +13,11 @@ let seniorDiscountRate = 40
 let discount;
 let price;
 
+let ticketName = document.querySelector("#ticketname");
+let ticketKilometers = document.querySelector("#ticketkilometers")
+let ticketdiscount = document.querySelector("#ticketdiscount")
+let ticketWagon = document.querySelector("#ticketwagon")
+let ticketPrice = document.querySelector("#ticketprice")
 
 document.getElementById('submitbtn').addEventListener("click", function() {
     fName = fNameInput.value
@@ -28,15 +33,26 @@ document.getElementById('submitbtn').addEventListener("click", function() {
     if(age <=18){
         discount = ((preDiscountPrice /100) *minorDiscountRate)
         price = preDiscountPrice - discount
+        ticketdiscount.innerHTML = "Discount: minors"
     } else if(age >= 65){
         discount = ((preDiscountPrice /100) *seniorDiscountRate)
         price = preDiscountPrice - discount
+        ticketdiscount.innerHTML = "Discount: seniors"
     } else {
         price = preDiscountPrice
+        ticketdiscount.innerHTML = "Discount: none eligible"
     }
     
     price = price.toFixed(2)
     
+    let wagonRng = Math.round(Math.random()*10)
+
+    ticketName.innerHTML = fName
+    ticketKilometers.innerHTML = kilo
+    ticketWagon.innerHTML = wagonRng
+    ticketPrice.innerHTML = "&#8364;" + price
+
+
     console.log("a")
     console.log(age,fName,kilo,price)
 });
