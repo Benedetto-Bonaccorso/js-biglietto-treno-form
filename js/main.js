@@ -25,7 +25,11 @@ document.getElementById('submitbtn').addEventListener("click", function() {
     age = ageInput.value
     
     if(isNaN(kilo)||isNaN(age)){
-        alert("Please insert valid credentials under \"Name and Surname\" and \"kilometers\" ")
+        alert("Please insert valid credentials under \"Name and Surname\", \"age\" and \"kilometers\" ")
+    }
+
+    if(fName == "" || kilo == "" || age == ""){
+        alert("Please fill in the whole form before submitting")
     }
 
     let preDiscountPrice = kilo*pricePerKilometer
